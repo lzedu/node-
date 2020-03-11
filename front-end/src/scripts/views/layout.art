@@ -1,0 +1,181 @@
+{{if isSignin}}
+<header class="nav-down responsive-nav hidden-lg hidden-md">
+    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <!--/.navbar-header-->
+    <div id="main-nav" class="collapse navbar-collapse">
+        <nav>
+            <ul class="nav navbar-nav">
+                <li><a class="home" href="#home">
+                    <span class="rect"></span>
+                    <span class="circle"></span>
+                Home</a></li>
+                <li><a class="featured" href="#featured"><span class="rect"></span>
+                    <span class="circle"></span>Featured</a></li>
+                <li><a class="projects" href="#projects"><span class="rect"></span>
+                    <span class="circle"></span>Recent Projects</a></li>
+                <li><a class="video" href="#video"><span class="rect"></span>
+                    <span class="circle"></span>Presentation</a></li>
+                <li><a class="blog" href="#blog"><span class="rect"></span>
+                    <span class="circle"></span>Blog Entries</a></li>
+                <li><a class="contact" href="#contact"><span class="rect"></span>
+                    <span class="circle"></span>Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <div class="sidebar-navigation hidde-sm hidden-xs">
+        <div class="logo">
+            <a>
+            <em>{{username}}</em>
+            <span id="btn-signout">注销</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#featured">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Featured
+                    </a>
+                </li>
+                <li class="projects">
+                    <a href="#projects">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Recent Work
+                    </a>
+                </li>
+                <li>
+                    <a href="#video">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Presentation
+                    </a>
+                </li>
+                <li>
+                    <a href="#blog">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Blog Entires
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Contact Us
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+        </ul>
+    </div>
+{{/if}}
+    
+    
+    <div class="page-content" id="page-content">
+        <div class="slider">
+            {{if !isSignin}}
+            <div class="btns-whatyoudo">
+                <div class="btn-item" id="register-btn" data-id="0">注册</div>
+                <div class="btn-item" id="login-btn" data-id="1">登录</div>
+            </div>
+            {{/if}}
+            <div class="Modern-Slider content-section" id="home">
+                <!-- Item -->
+                <div class="item item-1">
+                    <div class="img-fill">
+                        <div class="image"></div>
+                        {{if isSignin}}
+                        <div class="info">
+                            <div>
+                                <h1>Beautiful Template<br>Sentra</h1>
+                                <p>Sentra is free Bootstrap CSS Template by templatemo website.<br>
+                                    Please share our site link to your friends.</p>
+                                <div class="white-button button">
+                                    <a href="#featured">Discover More</a>
+                                </div>
+                            </div>
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+                <!-- // Item -->
+                <!-- Item 
+                <div class="item item-2">
+                    <div class="img-fill">
+                        <div class="image"></div>
+                        {{if isSignin}}
+                        <div class="info">
+                            <div>
+                                <h1>Please tell <br>your friends</h1>
+                                <p>Support templatemo by sharing a link to your friends.
+                                    <br>Thank you for helping us.</p>
+
+                                <div class="white-button button">
+                                    <a href="#featured">Share More</a>
+                                </div>
+                            </div>
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>-->
+                <!-- // Item -->
+                <!-- Item 
+                <div class="item item-3">
+                    <div class="img-fill">
+                        <div class="image"></div>
+                        {{if isSignin}}
+                        <div class="info">
+                            <div>
+                                <h1>Suspendisse suscipit<br>nulla sed</h1>
+                                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices <br>posuere cubilia
+                                    Curae; Sed at massa turpis.</p>
+
+                                <div class="white-button button">
+                                    <a href="#featured">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>-->
+                <!-- // Item -->
+            </div>
+            {{if !isSignin}}
+            <div class="login-box">
+                <form class="inputs-box">
+                    <div class="username-box">
+                        <label class="username-label">用户名:</label><input name="username" class="username" type="text"/>
+                    </div>
+                    <div class="password-box">
+                        <label class="password-label">密 码:</label><input name="password" class="password" type="password"/>
+                    </div>
+                </form>
+                <div class="login-btns">
+                    <div class="login-cancel">取消</div>
+                    <div class="login-sure btn-primary" id="btn-submit">确定</div>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+    </div>

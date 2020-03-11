@@ -1,0 +1,60 @@
+.slider{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    .btns-whatyoudo{
+        position: absolute;
+        // left: 50;
+        top: 50%;
+        width: 20%;
+        display: flex;
+        z-index: 1000;
+        justify-content: space-around;
+        .btn-item{
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            color: #fff;
+        }
+    }
+    .login-box{
+        display: none;
+        width: 500px;
+        height: 300px;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        z-index: 1000;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        .inputs-box{
+            margin: 80px 100px;
+            .username-box,.password-box{
+                margin: 20px auto;
+                label{
+                    width: 50px;
+                    color: #fff;
+                    text-align: right;
+                }
+            }
+        }
+        
+        .login-btns{
+            color: #fff;
+            display: flex;
+            padding: 0 20px;
+            justify-content: space-between;
+            .login-cancel,.login-sure{
+                line-height: 30px;
+                // background: #ccc;
+                text-align: center;
+                width: 50px;
+                border: 1px solid #ccc;
+                height: 30px;
+            }
+        }
+        
+    }
+}
+
